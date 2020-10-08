@@ -44,8 +44,9 @@ def get_hot(output: bool) -> List:
     for question in questions:
         answers = get_ans_code(question)
         for answer in answers:
-            i = i + 1
-            print(i)
+            if output:
+                i = i + 1
+                print(i)
             re = re + get_com(answer)
     return re
 
