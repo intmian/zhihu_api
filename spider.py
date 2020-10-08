@@ -33,7 +33,7 @@ def get_hot(output: bool) -> List:
     :param output: 是否输出正在访问哪个问题以方便调试
     :return: 数据
     :rtype: List[
-        Dict["name":xxx,"content":xxx,"time":xxx]
+        Dict["url_token":xxx,"content":xxx,"time":xxx]
         next Dict
         ...]
     :exception: requests.HTTPError,requests.RequestException
@@ -97,7 +97,7 @@ def get_com(answer: str) -> List:
     """返回前十条评论
     :param answer: 回答代码
     :rtype: List[
-        Dict["name":xxx,"content":xxx,"time":xxx]
+        Dict["url_token":xxx,"content":xxx,"time":xxx]
         next Dict
         ...]
     :exception: requests.HTTPError,requests.RequestException
@@ -110,7 +110,7 @@ def get_com(answer: str) -> List:
     data = response.json()
     re = list()
     for com in data["data"]:
-        re.append({"name": com["author"]["member"]["name"],
+        re.append({"url_token": com["author"]["member"]["url_token"],
                    "content": com["content"],
                    "time": com["created_time"]})
     return re
