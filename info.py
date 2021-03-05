@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 """
-AUTHOR:   方家彦
+AUTHOR:   mian
 DATE:     2020/10/8
 DESCRIBE: 一些配置
 """
